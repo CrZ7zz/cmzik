@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Partition Violon IV saison 1mv Vivaldi - CMsik</title>
+      <link rel="stylesheet" href="stylepage.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #111;
+    }
+
+    .controls {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      z-index: 10;
+    }
+
+    .partition-images {
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .partition-images img {
+      max-width: 90%;
+      height: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CMsik</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="explorer.html">Explorer</a>
+      <a href="bibliotheque.html">Ma Bibliothèque</a>
+      <a href="tutoriels.html">Tutoriels</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+
+
+  <div class="controls">
+    <label for="speed">Vitesse :</label>
+    <input type="range" id="speed" min="1" max="10" value="3">
+    <button id="start-btn">▶ Démarrer</button>
+    <button id="stop-btn">⏹ Stop</button>
+  </div>
+
+  <div class="partition-images">
+
+    <img src="vv1.png" alt="Page 1 de la partition piano">
+    <img src="vv2.png" alt="Page 2 de la partition piano">
+    <img src="vv3.png" alt="Page 3 de la partition piano">
+  </div>
+
+  <script>
+    let scrollInterval;
+
+    function startScroll() {
+      const speed = document.getElementById('speed').value;
+      const delay = 100 / speed;
+
+      stopScroll();
+
+      scrollInterval = setInterval(() => {
+        window.scrollBy(0, 1);
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          stopScroll();
+        }
+      }, delay);
+    }
+
+    function stopScroll() {
+      clearInterval(scrollInterval);
+    }
+
+    document.getElementById('start-btn').addEventListener('click', startScroll);
+    document.getElementById('stop-btn').addEventListener('click', stopScroll);
+  </script>
+
+</body>
+</html>

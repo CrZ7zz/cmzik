@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #111;
+}
+
+header {
+  background: #111;
+  color: white;
+  padding: 1.2em;
+  text-align: center;
+}
+
+nav {
+  margin-top: 0.8em;
+}
+
+nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #e42e77;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  background: #f9f9f9;
+  padding: 1em 0;
+}
+
+.carousel {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.carousel img {
+  width: 300px;
+  margin: 0 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.intro {
+  text-align: center;
+  padding: 2em;
+}
+
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.sections {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.card {
+  display: inline-block;
+  padding: 1.2em 2em;
+  background: #f0f0f0;
+  color: #111;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-decoration: none;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.card:hover {
+  background: #9b828c;
+  transform: translateY(-4px);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5em;
+  font-size: 0.9em;
+  background: #f4f4f4;
+}

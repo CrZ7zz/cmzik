@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ma Bibliothèque – CMsik</title>
+  <link rel="stylesheet" href="stylepage.css" />
+</head>
+
+<audio id="bg-music" autoplay loop hidden>
+  <source src="musique.mp3" type="audio/mpeg">
+</audio>
+
+  <script>
+    window.onload = function() {
+      var audio = document.getElementById("bg-music");
+      if (audio) {
+        audio.volume = 0.1; // vol zntre 0 et 1 en pctage
+      }
+    };
+  </script>
+
+<body>
+  <header>
+    <h1>CMsik</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="explorer.html">Explorer</a>
+      <a href="bibliotheque.html">Ma Bibliothèque</a>
+      <a href="tutoriels.html">Tutoriels</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <h2>Ma Bibliothèque</h2>
+    <p>Voici les partitions que tu as ajoutées en favoris :</p>
+    <ul>
+        <a href="tlou.html" class="card">🎼 "Take on me ( tlou version )"</a>
+    
+    </ul>
+     <ul>
+              <a href="Rvfl.html" class="card">🎼 "River Flows In you"</a>
+     </ul>
+  </main>
+
+  <footer><p>&copy; 2025 Amanda CHIGHINE</p></footer>
+</body>
+</html>

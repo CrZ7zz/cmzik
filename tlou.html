@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Guitare tab of Take on me (tlou version) - CMsik</title>
+    <link rel="stylesheet" href="stylepage.css" />
+  <style>
+
+    
+    body {
+      margin: 0;
+      padding: 2rem;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #111;
+      line-height: 2;
+    }
+
+    .controls {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      z-index: 10;
+    }
+
+    .partition {
+      margin-top: 100px;
+      max-width: 600px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100vh;
+      font-size: 1.2rem;
+      border: none;
+      resize: none;
+      outline: none;
+      background: #f8f8f8;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CMsik</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="explorer.html">Explorer</a>
+      <a href="bibliotheque.html">Ma Bibliothèque</a>
+      <a href="tutoriels.html">Tutoriels</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="controls">
+    <label for="speed">Vitesse :</label>
+    <input type="range" id="speed" min="1" max="10" value="3">
+    <button id="start-btn">▶ Démarrer</button>
+    <button id="stop-btn">⏹ Stop</button>
+  </div>
+
+  <div class="partition">
+    <textarea readonly>
+C#m          F#
+Talking away
+B                E
+I don't know what I'm to say
+     C#m           F#
+I'll say it anyway
+  B              E
+Today's another day to find you
+C#m         F#  G#m
+Shying away
+                        E*
+I'll be coming for your love, okay
+ 
+ 
+[Chorus]
+B    F#  G#m   E F#
+Take on  me
+B    F#  G#m   E F#
+Take me  on
+B    F#  G#m   E F#
+I'll be  gone
+            B    F#  G#m  E
+In a day or two...
+ 
+ 
+[Verse 2]
+C#m            F#
+Needless to say
+    B             E
+I'm odds and ends, but I'll be
+C#m            F#
+Stumbling away
+B                     E
+Slowly learning that life is okay
+C#m          F#  G#m
+Say after me
+                     E*
+It's no better to be safe than sorry
+ 
+ 
+[Chorus]
+B    F#  G#m   E F#
+Take on  me
+B    F#  G#m   E F#
+Take me  on
+B    F#  G#m   E F#
+I'll be  gone
+            B    F#  G#m  E
+In a day or two...
+            B    F#  G#m  E
+In a day or two...
+  
+    </textarea>
+  </div>
+
+  <script>
+    let scrollInterval;
+
+    function startScroll() {
+      const speed = document.getElementById('speed').value;
+      const delay = 100 / speed; // plus rapide quand speed il augmente
+
+      stopScroll(); // arrête tout lscroll 
+
+      scrollInterval = setInterval(() => {
+        window.scrollBy(0, 1); // scroll vers le bas
+        // Stomp si on arrive en bas
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+          stopScroll();
+        }
+      }, delay);
+    }
+
+    function stopScroll() {
+      clearInterval(scrollInterval);
+    }
+
+    // Lpr mettre liaison entre les boutonn
+    document.getElementById('start-btn').addEventListener('click', startScroll);
+    document.getElementById('stop-btn').addEventListener('click', stopScroll);
+  </script>
+
+ <footer><p>&copy; 2025 Amanda CHIGHINE</p></footer>
+</body>
+</html>

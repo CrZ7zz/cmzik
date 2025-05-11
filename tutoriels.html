@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tutoriels – CMsik</title>
+  <link rel="stylesheet" href="stylepage.css" />
+</head>
+
+
+
+<audio id="bg-music" autoplay loop hidden>
+  <source src="musique.mp3" type="audio/mpeg">
+</audio>
+
+  <script>
+    window.onload = function() {
+      var audio = document.getElementById("bg-music");
+      if (audio) {
+        audio.volume = 0.1; // vol zntre 0 et 1 en pctage
+      }
+    };
+  </script>
+
+<body>
+  <header>
+    <h1>CMsik</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="explorer.html">Explorer</a>
+      <a href="bibliotheque.html">Ma Bibliothèque</a>
+      <a href="tutoriels.html">Tutoriels</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Tutoriels pour tes instruments</h2>
+    <p>Apprends à jouer avec des tutos:</p>
+    <ul>
+         <a href="guitaretuto.html" class="card">🎸 Guitare </a>
+    </ul>
+
+    <ul>
+        <a href="pianotuto.html" class="card">🎹 Piano</a>
+    </ul>
+
+     <ul>
+      <a href="batterietuto.html" class="card">🥁 Batterie</a>
+     </ul>
+
+  </main>
+
+  <footer><p>&copy; 2025 Amanda CHIGHINE</p></footer>
+</body>
+</html>

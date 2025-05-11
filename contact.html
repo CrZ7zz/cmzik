@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact – CMsik</title>
+  <link rel="stylesheet" href="stylepage.css" />
+</head>
+
+<audio id="bg-music" autoplay loop hidden>
+  <source src="musique.mp3" type="audio/mpeg">
+</audio>
+
+  <script>
+    window.onload = function() {
+      var audio = document.getElementById("bg-music");
+      if (audio) {
+        audio.volume = 0.1; // vol zntre 0 et 1 en pctage
+      }
+    };
+  </script>
+<body>
+  <header>
+    <h1>CMsik</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="explorer.html">Explorer</a>
+      <a href="bibliotheque.html">Ma Bibliothèque</a>
+      <a href="tutoriels.html">Tutoriels</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Contacte-moi</h2>
+    <form>
+      <label for="nom">Nom :</label><br>
+      <input type="text" id="nom" name="nom"><br><br>
+
+      <label for="email">Email :</label><br>
+      <input type="email" id="email" name="email"><br><br>
+
+      <label for="message">Message :</label><br>
+      <textarea id="message" name="message" rows="5"></textarea><br><br>
+
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <h3> Autre coordonées :</h3>
+
+  </main>
+    <h4>
+      300 E St SW, Washington District of Columbia 20546, USA / 
+          public-inquiries@hq.nasa.gov /
+                +1 202-358-0000
+
+
+
+
+  <footer><p>&copy;2025 Amanda CHIGHINE</p></footer>
+</body>
+</html>

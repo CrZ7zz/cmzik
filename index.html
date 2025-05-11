@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CMsiK</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<audio id="bg-music" autoplay loop hidden>
+  <source src="musique.mp3" type="audio/mpeg">
+</audio>
+
+  <script>
+    window.onload = function() {
+      var audio = document.getElementById("bg-music");
+      if (audio) {
+        audio.volume = 0.1; // vol zntre 0 et 1 en pctage
+      }
+    };
+  </script>
+
+
+
+
+<body>
+  <header>
+    <h1>CMsiK</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="explorer.html">Explorer</a>
+      <a href="bibliotheque.html">Ma Bibliothèque</a>
+      <a href="tutoriels.html">Tutoriels</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+
+  <section class="intro">
+    <h2>Explore, Apprends, Joue</h2>
+    <p>Bienvenue sur <strong>CMsik</strong>, ta bibliothèque en ligne de partitions et tutoriels pour apprendre à jouer de la musique à ton rythme.</p>
+    <div class="sections">
+      <a href="explorer.html" class="card">🎼 Bibliothèque de partitions</a>
+      <a href="tutoriels.html" class="card">📹 Apprend à jouer</a>
+
+      
+    </div>
+  </section>
+
+    <section class="carousel-container">
+    <div class="carousel">
+      <img src="media/images/guitare.jpg" alt="Guitare">
+      <img src="media/images/piano.jpg" alt="Piano">
+      <img src="media/images/batterie.jpg" alt="Batterie">
+      <img src="media/images/bass.jpg" alt="Bass">
+      <img src="media/images/violon.jpg" alt="violon">
+      <img src="media/images/guitare.jpg" alt="Guitare">
+      <img src="media/images/piano.jpg" alt="Piano">
+      <img src="media/images/batterie.jpg" alt="Batterie">
+      <img src="media/images/bass.jpg" alt="Bass">
+      <img src="media/images/violon.jpg" alt="violon"
+      
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Amanda CHIGHINE
